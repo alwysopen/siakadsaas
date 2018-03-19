@@ -1,57 +1,26 @@
 <template>
-  <div id="app" class="app">
-    <auth-layout v-if="isAuth"></auth-layout>
-    <div class="basix-container" v-else>
-        <Sidebar :navItems="nav"/>
-        <div id="right-panel" class="right-panel">
-          <BasixHeader/>
-          <div class="content">
-            <transition enter-active-class="animated fadeIn">
-              <router-view></router-view>
-            </transition>
-          </div>
-        </div>
-    </div>
-  </div>
+  <router-view></router-view>
 </template>
 
-
 <script>
-  import nav from './nav'
-  import { Header as BasixHeader, Sidebar  } from './components/'
-  import AuthLayout from './layouts/AuthLayout.vue';
-
-  export default {
-    data (){
-      return{
-        nav: nav.items
-      }
-    },
-    components: {
-      AuthLayout,
-      BasixHeader,
-      Sidebar
-    },
-    computed: {
-      name(){
-        return this.$route.name
-      },
-      list() {
-        return this.$route.matched
-      },
-      isAuth () {
-        return this.$route.path.match('auth')
-      }
-    }
-  }
+export default {
+  name: 'app'
+}
 </script>
 
-
-<style lang="scss">
-  @import "./assets/bootstrap/bootstrap";
-
-  $fa-font-path: "../node_modules/font-awesome/fonts" !default;
-  @import "~font-awesome/scss/font-awesome";
-  @import "./assets/style";
+<style>
+  /* Import Font Awesome Icons Set */
+  @import '~flag-icon-css/css/flag-icon.min.css';
+  /* Import Font Awesome Icons Set */
+  $fa-font-path: '~font-awesome/fonts/';
+  @import '~font-awesome/css/font-awesome.min.css';
+  /* Import Simple Line Icons Set */
+  $simple-line-font-path: '~simple-line-icons/fonts/';
+  @import '~simple-line-icons/css/simple-line-icons.css';
+  /* Import Bootstrap Vue Styles */
+  @import '~bootstrap-vue/dist/bootstrap-vue.css';
 </style>
-
+<style lang="scss">
+  // Import Main styles for this application
+  @import './scss/style';
+</style>

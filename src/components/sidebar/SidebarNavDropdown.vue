@@ -1,10 +1,10 @@
 <template>
-  <li class="menu-item-has-children" :to="url" @click="handleClick">
-    <a href="#" > <i class="menu-icon" :class="icon"></i><span class="menu-title-text">{{name}}</span></a>
-    <ul class="sub-menu children">
+  <router-link tag="li" class="nav-item nav-dropdown" :to="url" disabled>
+    <div class="nav-link nav-dropdown-toggle" @click="handleClick"><i :class="icon"></i> {{name}}</div>
+    <ul class="nav-dropdown-items">
       <slot></slot>
     </ul>
-  </li>
+  </router-link>
 </template>
 
 <script>

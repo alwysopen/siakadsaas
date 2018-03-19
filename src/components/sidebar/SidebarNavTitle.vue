@@ -1,5 +1,5 @@
 <template>
-  <h3 :class="classList">
+  <li :class="classList">
     <template v-if="wrapper && wrapper.element">
       <component v-bind:is="wrapper.element" v-bind="wrapper.attributes">
         {{name}}
@@ -8,7 +8,7 @@
     <template v-else>
       {{name}}
     </template>
-  </h3>
+  </li>
 </template>
 
 <script>
@@ -30,7 +30,7 @@
     computed: {
       classList () {
         return [
-          'menu-title',
+          'nav-title',
           ...this.itemClasses
         ]
       },

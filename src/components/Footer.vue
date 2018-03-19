@@ -1,11 +1,11 @@
 <template>
-  <footer class="basix-footer">
-    <a href="http://vuejsadmin.com">Basix Admin</a> &copy; 2017 VueJSAdmin.
-    <span class="float-right">Powered by <a href="http://vuejsadmin.com">VueJSAdmin</a></span>
+  <footer class="app-footer">
+    <span><a href="http://coreui.io">CoreUI</a> &copy; 2018 creativeLabs.</span>
+    <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
   </footer>
 </template>
 <script>
 export default {
-  name: 'footer'
+  name: 'c-footer'
 }
 </script>
