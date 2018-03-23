@@ -34,6 +34,7 @@ import datasiswa from '@/views/pages/datasiswa'
 import dataguru from '@/views/pages/dataguru'
 import datauser from '@/views/pages/datausers'
 import approvalsiswa from '@/views/pages/approvalsiswa'
+import elearningtugas from '@/views/pages/elearningtugas'
 Vue.use(Router)
 
 export default new Router({
@@ -89,6 +90,26 @@ export default new Router({
               path: 'approvalsiswa',
               name: 'Approval Siswa',
               component: approvalsiswa
+            },
+            {
+              path: 'approvalguru',
+              name: 'Approval Guru',
+              component: Forms
+            }
+          ]
+        },
+        {
+          path: 'elearning',
+          redirect: '/elearning/tugas',
+          name: 'E-Learning',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'tugas',
+              name: 'Tugas Siswa',
+              component: elearningtugas
             },
             {
               path: 'approvalguru',
