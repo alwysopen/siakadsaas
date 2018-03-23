@@ -78,12 +78,12 @@ export default {
     },
     {
       name: 'E-Learning',
-      url: '/buttons',
+      url: '/elearning',
       icon: 'fa fa-university',
       children: [
         {
           name: 'Tugas',
-          url: '/tugas',
+          url: '/elearning/tugas',
           icon: 'fa fa-circle-thin'
         },
         {
