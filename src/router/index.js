@@ -7,8 +7,6 @@ import Full from '@/containers/Full'
 // Views
 import Dashboard from '@/views/Dashboard'
 // Views - Components
-import Forms from '@/views/base/Forms'
-
 // Views - Buttons
 import StandardButtons from '@/views/buttons/StandardButtons'
 import ButtonGroups from '@/views/buttons/ButtonGroups'
@@ -34,6 +32,7 @@ import datasiswa from '@/views/pages/datasiswa'
 import dataguru from '@/views/pages/dataguru'
 import datauser from '@/views/pages/datausers'
 import approvalsiswa from '@/views/pages/approvalsiswa'
+import approvalguru from '@/views/pages/approvalguru'
 Vue.use(Router)
 
 export default new Router({
@@ -93,7 +92,7 @@ export default new Router({
             {
               path: 'approvalguru',
               name: 'Approval Guru',
-              component: Forms
+              component: approvalguru
             }
           ]
         },
