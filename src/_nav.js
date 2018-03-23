@@ -11,7 +11,7 @@ export default {
     },
     {
       title: true,
-      name: 'Theme',
+      name: 'Reporting',
       class: '',
       wrapper: {
         element: '',
@@ -19,18 +19,18 @@ export default {
       }
     },
     {
-      name: 'Colors',
-      url: '/theme/colors',
-      icon: 'icon-drop'
+      name: 'Rangkuman Nilai',
+      url: '/rangkumannilai',
+      icon: 'fa fa-book'
     },
     {
-      name: 'Typography',
-      url: '/theme/typography',
-      icon: 'icon-pencil'
+      name: 'Rekap Absen',
+      url: '/rekapabsen',
+      icon: 'fa fa-book'
     },
     {
       title: true,
-      name: 'Components',
+      name: 'Transaction',
       class: '',
       wrapper: {
         element: '',
@@ -38,143 +38,95 @@ export default {
       }
     },
     {
-      name: 'Base',
+      name: 'Master Data',
       url: '/base',
-      icon: 'icon-puzzle',
+      icon: 'fa fa-database',
       children: [
         {
-          name: 'Breadcrumbs',
-          url: '/base/breadcrumbs',
-          icon: 'icon-puzzle'
+          name: 'Data Siswa',
+          url: '/masterdata/datasiswa',
+          icon: 'fa fa-circle-thin'
         },
         {
-          name: 'Cards',
-          url: '/base/cards',
-          icon: 'icon-puzzle'
+          name: 'Data Guru',
+          url: '/masterdata/dataguru',
+          icon: 'fa fa-circle-thin'
         },
         {
-          name: 'Carousels',
-          url: '/base/carousels',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Collapses',
-          url: '/base/collapses',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Forms',
-          url: '/base/forms',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Jumbotrons',
-          url: '/base/jumbotrons',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'List Groups',
-          url: '/base/list-groups',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Navs',
-          url: '/base/navs',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Paginations',
-          url: '/base/paginations',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Popovers',
-          url: '/base/popovers',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Progress Bars',
-          url: '/base/progress-bars',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Switches',
-          url: '/base/switches',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Tables',
-          url: '/base/tables',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Tooltips',
-          url: '/base/tooltips',
-          icon: 'icon-puzzle'
+          name: 'Data Users',
+          url: '/masterdata/datausers',
+          icon: 'fa fa-circle-thin'
         }
       ]
     },
     {
-      name: 'Buttons',
+      name: 'Management User',
+      url: '/base',
+      icon: 'fa fa-users',
+      children: [
+        {
+          name: 'Approval Siswa',
+          url: '/managementuser/approvalsiswa',
+          icon: 'fa fa-circle-thin'
+        },
+        {
+          name: 'Approval Guru',
+          url: '/managementuser/approvalguru',
+          icon: 'fa fa-circle-thin'
+        }
+      ]
+    },
+    {
+      name: 'E-Learning',
       url: '/buttons',
-      icon: 'icon-cursor',
+      icon: 'fa fa-university',
       children: [
         {
-          name: 'Standard Buttons',
-          url: '/buttons/standard-buttons',
-          icon: 'icon-cursor'
+          name: 'Tugas',
+          url: '/tugas',
+          icon: 'fa fa-circle-thin'
         },
         {
-          name: 'Button Groups',
-          url: '/buttons/button-groups',
-          icon: 'icon-cursor'
-        },
-        {
-          name: 'Dropdowns',
-          url: '/buttons/dropdowns',
-          icon: 'icon-cursor'
-        },
-        {
-          name: 'Social Buttons',
-          url: '/buttons/social-buttons',
-          icon: 'icon-cursor'
+          name: 'Jadwal Pelajaran',
+          url: '/jadwalpelajaran',
+          icon: 'fa fa-circle-thin'
         }
       ]
     },
     {
-      name: 'Icons',
+      name: 'E-SPP',
       url: '/icons',
-      icon: 'icon-star',
+      icon: 'fa fa-dollar',
       children: [
         {
-          name: 'Flags',
-          url: '/icons/flags',
-          icon: 'icon-star',
+          name: 'Monitoring SPP',
+          url: '/sppmonitoring',
+          icon: 'fa fa-circle-thin',
           badge: {
             variant: 'success',
             text: 'NEW'
           }
         },
         {
-          name: 'Font Awesome',
-          url: '/icons/font-awesome',
-          icon: 'icon-star',
+          name: 'Approval Pembayaran',
+          url: '/accpembayaran',
+          icon: 'fa fa-circle-thin',
           badge: {
             variant: 'secondary',
             text: '4.7'
           }
         },
         {
-          name: 'Simple Line Icons',
-          url: '/icons/simple-line-icons',
-          icon: 'icon-star'
+          name: 'History Transaksi',
+          url: '/historytransaksi',
+          icon: 'fa fa-circle-thin'
         }
       ]
     },
     {
-      name: 'Charts',
-      url: '/charts',
-      icon: 'icon-pie-chart'
+      name: 'Log Activity',
+      url: '/logactivity',
+      icon: 'fa fa-calendar'
     },
     {
       name: 'Notifications',
@@ -182,77 +134,16 @@ export default {
       icon: 'icon-bell',
       children: [
         {
-          name: 'Alerts',
+          name: 'Notif SPP',
           url: '/notifications/alerts',
           icon: 'icon-bell'
         },
         {
-          name: 'Badges',
+          name: 'Notif Approval User',
           url: '/notifications/badges',
           icon: 'icon-bell'
-        },
-        {
-          name: 'Modals',
-          url: '/notifications/modals',
-          icon: 'icon-bell'
         }
       ]
-    },
-    {
-      name: 'Widgets',
-      url: '/widgets',
-      icon: 'icon-calculator',
-      badge: {
-        variant: 'primary',
-        text: 'NEW'
-      }
-    },
-    {
-      divider: true
-    },
-    {
-      title: true,
-      name: 'Extras'
-    },
-    {
-      name: 'Pages',
-      url: '/pages',
-      icon: 'icon-star',
-      children: [
-        {
-          name: 'Login',
-          url: '/pages/login',
-          icon: 'icon-star'
-        },
-        {
-          name: 'Register',
-          url: '/pages/register',
-          icon: 'icon-star'
-        },
-        {
-          name: 'Error 404',
-          url: '/pages/404',
-          icon: 'icon-star'
-        },
-        {
-          name: 'Error 500',
-          url: '/pages/500',
-          icon: 'icon-star'
-        }
-      ]
-    },
-    {
-      name: 'Download CoreUI',
-      url: 'http://coreui.io/vue/',
-      icon: 'icon-cloud-download',
-      class: 'mt-auto',
-      variant: 'success'
-    },
-    {
-      name: 'Try CoreUI PRO',
-      url: 'http://coreui.io/pro/vue/',
-      icon: 'icon-layers',
-      variant: 'danger'
     }
   ]
 }

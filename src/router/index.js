@@ -6,29 +6,8 @@ import Full from '@/containers/Full'
 
 // Views
 import Dashboard from '@/views/Dashboard'
-
-import Colors from '@/views/theme/Colors'
-import Typography from '@/views/theme/Typography'
-
-import Charts from '@/views/Charts'
-import Widgets from '@/views/Widgets'
-
 // Views - Components
-import Cards from '@/views/base/Cards'
 import Forms from '@/views/base/Forms'
-import Switches from '@/views/base/Switches'
-import Tables from '@/views/base/Tables'
-import Breadcrumbs from '@/views/base/Breadcrumbs'
-import Carousels from '@/views/base/Carousels'
-import Collapses from '@/views/base/Collapses'
-import Jumbotrons from '@/views/base/Jumbotrons'
-import ListGroups from '@/views/base/ListGroups'
-import Navs from '@/views/base/Navs'
-import Navbars from '@/views/base/Navbars'
-import Paginations from '@/views/base/Paginations'
-import Popovers from '@/views/base/Popovers'
-import ProgressBars from '@/views/base/ProgressBars'
-import Tooltips from '@/views/base/Tooltips'
 
 // Views - Buttons
 import StandardButtons from '@/views/buttons/StandardButtons'
@@ -51,7 +30,10 @@ import Page404 from '@/views/pages/Page404'
 import Page500 from '@/views/pages/Page500'
 import Login from '@/views/pages/Login'
 import Register from '@/views/pages/Register'
-
+import datasiswa from '@/views/pages/datasiswa'
+import dataguru from '@/views/pages/dataguru'
+import datauser from '@/views/pages/datausers'
+import approvalsiswa from '@/views/pages/approvalsiswa'
 Vue.use(Router)
 
 export default new Router({
@@ -71,117 +53,47 @@ export default new Router({
           component: Dashboard
         },
         {
-          path: 'theme',
-          redirect: '/theme/colors',
-          name: 'Theme',
+          path: 'masterdata',
+          redirect: '/masterdata/datasiswa',
+          name: 'Master Data',
           component: {
             render (c) { return c('router-view') }
           },
           children: [
             {
-              path: 'colors',
-              name: 'Colors',
-              component: Colors
+              path: 'datasiswa',
+              name: 'Data Siswa',
+              component: datasiswa
             },
             {
-              path: 'typography',
-              name: 'Typography',
-              component: Typography
+              path: 'dataguru',
+              name: 'Data Guru',
+              component: dataguru
+            },
+            {
+              path: 'datausers',
+              name: 'Data User',
+              component: datauser
             }
           ]
         },
         {
-          path: 'charts',
-          name: 'Charts',
-          component: Charts
-        },
-        {
-          path: 'widgets',
-          name: 'Widgets',
-          component: Widgets
-        },
-        {
-          path: 'base',
-          redirect: '/base/cards',
-          name: 'Base',
+          path: 'managementuser',
+          redirect: '/managementuser/approvalsiswa',
+          name: 'Management User',
           component: {
             render (c) { return c('router-view') }
           },
           children: [
             {
-              path: 'cards',
-              name: 'Cards',
-              component: Cards
+              path: 'approvalsiswa',
+              name: 'Approval Siswa',
+              component: approvalsiswa
             },
             {
-              path: 'forms',
-              name: 'Forms',
+              path: 'approvalguru',
+              name: 'Approval Guru',
               component: Forms
-            },
-            {
-              path: 'switches',
-              name: 'Switches',
-              component: Switches
-            },
-            {
-              path: 'tables',
-              name: 'Tables',
-              component: Tables
-            },
-            {
-              path: 'breadcrumbs',
-              name: 'Breadcrumbs',
-              component: Breadcrumbs
-            },
-            {
-              path: 'carousels',
-              name: 'Carousels',
-              component: Carousels
-            },
-            {
-              path: 'collapses',
-              name: 'Collapses',
-              component: Collapses
-            },
-            {
-              path: 'jumbotrons',
-              name: 'Jumbotrons',
-              component: Jumbotrons
-            },
-            {
-              path: 'list-groups',
-              name: 'List Groups',
-              component: ListGroups
-            },
-            {
-              path: 'navs',
-              name: 'Navs',
-              component: Navs
-            },
-            {
-              path: 'navbars',
-              name: 'Navbars',
-              component: Navbars
-            },
-            {
-              path: 'paginations',
-              name: 'Paginations',
-              component: Paginations
-            },
-            {
-              path: 'popovers',
-              name: 'Popovers',
-              component: Popovers
-            },
-            {
-              path: 'progress-bars',
-              name: 'Progress Bars',
-              component: ProgressBars
-            },
-            {
-              path: 'tooltips',
-              name: 'Tooltips',
-              component: Tooltips
             }
           ]
         },
