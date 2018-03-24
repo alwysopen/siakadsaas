@@ -105,7 +105,7 @@ export default {
         },
         {
           name: 'Approval Pembayaran',
-          url: '/accpembayaran',
+          url: '/espp/accpembayaran',
           icon: 'fa fa-circle-thin',
           badge: {
             variant: 'secondary',

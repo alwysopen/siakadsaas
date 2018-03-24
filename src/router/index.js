@@ -36,6 +36,7 @@ import approvalguru from '@/views/pages/approvalguru'
 import elearningtugas from '@/views/pages/elearningtugas'
 import elearningjadwal from '@/views/pages/elearningjadwal'
 import esppmonitoring from '@/views/pages/esppmonitoring'
+import accpembayaran from '@/views/pages/accpembayaran'
 Vue.use(Router)
 
 export default new Router({
@@ -113,9 +114,9 @@ export default new Router({
               component: esppmonitoring
             },
             {
-              path: 'approvalguru',
-              name: 'Approval Guru',
-              component: approvalguru
+              path: 'accpembayaran',
+              name: 'Approval Pembayaran',
+              component: accpembayaran
             }
           ]
         },
