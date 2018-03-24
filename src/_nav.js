@@ -88,7 +88,7 @@ export default {
         },
         {
           name: 'Jadwal Pelajaran',
-          url: '/jadwalpelajaran',
+          url: '/elearning/jadwalpelajaran',
           icon: 'fa fa-circle-thin'
         }
       ]
