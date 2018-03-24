@@ -35,6 +35,7 @@ import approvalsiswa from '@/views/pages/approvalsiswa'
 import approvalguru from '@/views/pages/approvalguru'
 import elearningtugas from '@/views/pages/elearningtugas'
 import elearningjadwal from '@/views/pages/elearningjadwal'
+import esppmonitoring from '@/views/pages/esppmonitoring'
 Vue.use(Router)
 
 export default new Router({
@@ -90,6 +91,26 @@ export default new Router({
               path: 'approvalsiswa',
               name: 'Approval Siswa',
               component: approvalsiswa
+            },
+            {
+              path: 'approvalguru',
+              name: 'Approval Guru',
+              component: approvalguru
+            }
+          ]
+        },
+        {
+          path: 'espp',
+          redirect: '/espp/monitoring',
+          name: 'E-SPP',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'monitoring',
+              name: 'Monitoring SPP',
+              component: esppmonitoring
             },
             {
               path: 'approvalguru',
