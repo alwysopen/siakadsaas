@@ -114,7 +114,7 @@ export default {
         },
         {
           name: 'History Transaksi',
-          url: '/historytransaksi',
+          url: '/espp/historytransaksi',
           icon: 'fa fa-circle-thin'
         }
       ]
