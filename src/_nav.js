@@ -95,21 +95,17 @@ export default {
     },
     {
       name: 'E-SPP',
-      url: '/icons',
+      url: '/espp',
       icon: 'fa fa-dollar',
       children: [
         {
           name: 'Monitoring SPP',
-          url: '/sppmonitoring',
-          icon: 'fa fa-circle-thin',
-          badge: {
-            variant: 'success',
-            text: 'NEW'
-          }
+          url: '/espp/monitoring',
+          icon: 'fa fa-circle-thin'
         },
         {
           name: 'Approval Pembayaran',
-          url: '/accpembayaran',
+          url: '/espp/accpembayaran',
           icon: 'fa fa-circle-thin',
           badge: {
             variant: 'secondary',
@@ -118,7 +114,7 @@ export default {
         },
         {
           name: 'History Transaksi',
-          url: '/historytransaksi',
+          url: '/espp/historytransaksi',
           icon: 'fa fa-circle-thin'
         }
       ]

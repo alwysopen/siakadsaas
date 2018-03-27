@@ -4,7 +4,7 @@
       <b-col xs="12">
         <b-card>
             <div slot="header">
-            Data Siswa
+            Rangkuman Nilai
             <label class=" float-right mb-0">
              <button class="btn btn-primary" @click="myModal = true">Tambah Data</button>
             </label>
@@ -20,12 +20,11 @@
          <table class="table bordered-stripped">
              <thead>
                  <th>Nama</th>
-                 <th>Alamat</th>
-                 <th>Kelas</th>
-                 <th>Jenis Kelamin</th>
-                 <th>Email</th>
-                 <th>Nomor Telpon</th>
-                 <th>Foto</th>
+                 <th>UTS</th>
+                 <th>UKK</th>
+                 <th>Tugas</th>
+                 <th>Ulangan Harian</th>
+                 <th>Total</th>
              </thead>
              <tbody>
                  <tr>
@@ -41,7 +40,7 @@
 
 <script>
 export default {
-  name: 'datasiswa',
+  name: 'rangukmannilai',
   data () {
     return {
       myModal: false

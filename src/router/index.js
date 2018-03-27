@@ -35,6 +35,11 @@ import approvalsiswa from '@/views/pages/approvalsiswa'
 import approvalguru from '@/views/pages/approvalguru'
 import elearningtugas from '@/views/pages/elearningtugas'
 import elearningjadwal from '@/views/pages/elearningjadwal'
+import esppmonitoring from '@/views/pages/esppmonitoring'
+import accpembayaran from '@/views/pages/accpembayaran'
+import historytransaksi from '@/views/pages/espphistorymonitoring'
+import rangukmannilai from '@/views/pages/rangkumannilai'
+import rekapabsen from '@/views/pages/rekapabsen'
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +57,16 @@ export default new Router({
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'rangkumannilai',
+          name: 'Rangkuman Nilai',
+          component: rangukmannilai
+        },
+        {
+          path: 'rekapabsen',
+          name: 'Rekap Absen',
+          component: rekapabsen
         },
         {
           path: 'masterdata',
@@ -95,6 +110,31 @@ export default new Router({
               path: 'approvalguru',
               name: 'Approval Guru',
               component: approvalguru
+            }
+          ]
+        },
+        {
+          path: 'espp',
+          redirect: '/espp/monitoring',
+          name: 'E-SPP',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'monitoring',
+              name: 'Monitoring SPP',
+              component: esppmonitoring
+            },
+            {
+              path: 'accpembayaran',
+              name: 'Approval Pembayaran',
+              component: accpembayaran
+            },
+            {
+              path: 'historytransaksi',
+              name: 'History Transaksi',
+              component: historytransaksi
             }
           ]
         },
