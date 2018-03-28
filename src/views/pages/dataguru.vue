@@ -6,9 +6,67 @@
             <div slot="header">
             Data Guru
             <label class=" float-right mb-0">
-             <button class="btn btn-primary">Tambah Data</button>
+               <button class="btn btn-primary" @click="myModal = true">Tambah Data</button>
             </label>
           </div>
+          <b-modal title="Ubah Data Guru" v-model="myModal1" @ok="myModal1 = false">
+             <div class="form-group">
+              <label>Nama Guru</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <textarea class="form-control" ></textarea>
+            </div>
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+              <select class="form-control" type="text">
+                <option valule="laki-laki">Laki-Laki</option>
+                 <option valule="perempuan">Perempuan</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label>Email</label>
+              <input class="form-control" type="email">
+            </div>
+             <div class="form-group">
+              <label>Nomor telpon</label>
+              <input class="form-control" type="text">
+            </div>
+             <div class="form-group">
+              <label>foto</label>
+              <input class="form-control" type="file">
+            </div>
+          </b-modal>
+          <b-modal title="Input Data Guru" v-model="myModal" @ok="myModal = false">
+             <div class="form-group">
+              <label>Nama Guru</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <textarea class="form-control" ></textarea>
+            </div>
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+              <select class="form-control" type="text">
+                <option valule="laki-laki">Laki-Laki</option>
+                 <option valule="perempuan">Perempuan</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label>Email</label>
+              <input class="form-control" type="email">
+            </div>
+             <div class="form-group">
+              <label>Nomor telpon</label>
+              <input class="form-control" type="text">
+            </div>
+             <div class="form-group">
+              <label>foto</label>
+              <input class="form-control" type="file">
+            </div>
+          </b-modal>
          <table class="table bordered-stripped">
              <thead>
                  <th>Nama</th>
@@ -32,6 +90,11 @@
 
 <script>
 export default {
-  name: 'dataguru'
+  name: 'dataguru',
+  data () {
+    return {
+      myModal: false
+    }
+  }
 }
 </script>

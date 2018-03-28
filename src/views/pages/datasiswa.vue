@@ -9,14 +9,72 @@
              <button class="btn btn-primary" @click="myModal = true">Tambah Data</button>
             </label>
           </div>
-          <b-modal title="Modal title" v-model="myModal" @ok="myModal = false">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </b-modal>
+          <b-modal title="Ubah Data Siswa" v-model="myModal1" @ok="myModal1 = false">
+             <div class="form-group">
+              <label>Nama Siswa</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <textarea class="form-control" ></textarea>
+            </div>
+            <div class="form-group">
+              <label>Kelas</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+              <select class="form-control" type="text">
+                <option valule="laki-laki">Laki-Laki</option>
+                 <option valule="perempuan">Perempuan</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label>Email</label>
+              <input class="form-control" type="email">
+            </div>
+             <div class="form-group">
+              <label>Nomor telpon</label>
+              <input class="form-control" type="text">
+            </div>
+             <div class="form-group">
+              <label>foto</label>
+              <input class="form-control" type="file">
+            </div>
+          </b-modal>
+          <b-modal title="Input Data Siswa" v-model="myModal" @ok="myModal = false">
+             <div class="form-group">
+              <label>Nama Siswa</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <textarea class="form-control" ></textarea>
+            </div>
+            <div class="form-group">
+              <label>Kelas</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+              <select class="form-control" type="text">
+                <option valule="laki-laki">Laki-Laki</option>
+                 <option valule="perempuan">Perempuan</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label>Email</label>
+              <input class="form-control" type="email">
+            </div>
+             <div class="form-group">
+              <label>Nomor telpon</label>
+              <input class="form-control" type="text">
+            </div>
+             <div class="form-group">
+              <label>foto</label>
+              <input class="form-control" type="file">
+            </div>
+          </b-modal>
          <table class="table bordered-stripped">
              <thead>
                  <th>Nama</th>
