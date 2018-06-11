@@ -6,9 +6,23 @@
             <div slot="header">
             Tugas
             <label class=" float-right mb-0">
-             <button class="btn btn-primary">Tambah Tugas</button>
+             <button class="btn btn-primary" @click="myModal = true">Tambah Tugas</button>
             </label>
           </div>
+          <b-modal title="Tambah Tugas" v-model="myModal" @ok="myModal = false">
+             <div class="form-group">
+              <label>Judul Tugas</label>
+              <input class="form-control" type="text">
+            </div>
+             <div class="form-group">
+              <label>Deskripsi</label>
+              <textarea class="form-control"></textarea>
+            </div>
+             <div class="form-group">
+              <label>attachment</label>
+              <input class="form-control" type="file">
+            </div>
+         </b-modal>
          <table class="table bordered-stripped">
              <thead>
                  <th>Judul</th>
@@ -29,6 +43,11 @@
 
 <script>
 export default {
-  name: 'elearningtugas'
+  name: 'elearningtugas',
+  data () {
+    return {
+      myModal: false
+    }
+  }
 }
 </script>

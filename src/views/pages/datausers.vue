@@ -6,9 +6,23 @@
             <div slot="header">
             Data User
             <label class=" float-right mb-0">
-             <button class="btn btn-primary">Tambah Data</button>
+              <button class="btn btn-primary"  @click="myModal = true">Tambah Data</button>
             </label>
           </div>
+          <b-modal title="Input Data User" v-model="myModal" @ok="myModal = false">
+             <div class="form-group">
+              <label>Username</label>
+              <input class="form-control" type="text">
+            </div>
+             <div class="form-group">
+              <label>password</label>
+              <input class="form-control" type="password">
+            </div>
+             <div class="form-group">
+              <label>role</label>
+              <input class="form-control" type="text">
+            </div>
+         </b-modal>
          <table class="table bordered-stripped">
              <thead>
                  <th>Nama</th>
@@ -30,6 +44,11 @@
 
 <script>
 export default {
-  name: 'datausers'
+  name: 'datausers',
+  data () {
+    return {
+      myModal: false
+    }
+  }
 }
 </script>

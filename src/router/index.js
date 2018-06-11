@@ -29,6 +29,7 @@ import Page500 from '@/views/pages/Page500'
 import Login from '@/views/pages/Login'
 import Register from '@/views/pages/Register'
 import datasiswa from '@/views/pages/datasiswa'
+import datakelas from '@/views/pages/datakelas'
 import dataguru from '@/views/pages/dataguru'
 import datauser from '@/views/pages/datausers'
 import approvalsiswa from '@/views/pages/approvalsiswa'
@@ -80,6 +81,11 @@ export default new Router({
               path: 'datasiswa',
               name: 'Data Siswa',
               component: datasiswa
+            },
+            {
+              path: 'datakelas',
+              name: 'Data Kelas',
+              component: datakelas
             },
             {
               path: 'dataguru',
