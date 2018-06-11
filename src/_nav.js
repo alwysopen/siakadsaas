@@ -48,6 +48,11 @@ export default {
           icon: 'fa fa-circle-thin'
         },
         {
+          name: 'Data Kelas',
+          url: '/masterdata/datakelas',
+          icon: 'fa fa-circle-thin'
+        },
+        {
           name: 'Data Guru',
           url: '/masterdata/dataguru',
           icon: 'fa fa-circle-thin'
