@@ -48,6 +48,11 @@ export default {
           icon: 'fa fa-circle-thin'
         },
         {
+          name: 'Data Buku',
+          url: '/masterdata/databuku',
+          icon: 'fa fa-circle-thin'
+        },
+        {
           name: 'Data Kelas',
           url: '/masterdata/datakelas',
           icon: 'fa fa-circle-thin'
