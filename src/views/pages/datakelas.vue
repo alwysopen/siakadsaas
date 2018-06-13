@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import swal from 'sweetalert'
 import kelasService from '../../services/kelas'
 export default {
   name: 'datakelas',
@@ -72,11 +73,13 @@ export default {
         'idsekolah': 3
       }
       await kelasService.create(data)
+      swal('Sukses!', 'Data Sukses Di simpan', 'success')
       this.loadData()
     },
     async hapusdata (item) {
       let id = item.id
       await kelasService.delete(id)
+      swal('Sukses!', 'Data Sukses Dihapus', 'success')
       this.loadData()
     },
     Ubah: function (item) {
@@ -93,6 +96,7 @@ export default {
       }
       let id = vm.id
       await kelasService.update(data, id)
+      swal('Sukses!', 'Data Sukses Diubah', 'success')
       this.loadData()
     }
   }
