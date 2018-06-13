@@ -4,12 +4,12 @@
       <b-col xs="12">
         <b-card>
             <div slot="header">
-            Data Buku
+            Jadwal Pelajaran
             <label class=" float-right mb-0">
              <button class="btn btn-primary" @click="myModal = true">Tambah Data</button>
             </label>
           </div>
-          <b-modal title="Simpan Data Buku" v-model="myModal" @ok="test">
+          <b-modal title="Simpan Jadwal Pelajaran" v-model="myModal" @ok="test">
             <div class="form-group">
               <label>Nama Buku</label>
               <input class="form-control" v-model="namabuku" type="text">
@@ -27,7 +27,7 @@
               <input class="form-control" v-model="tahunterbit" type="text">
             </div>
           </b-modal>
-          <b-modal title="Ubah Data Buku" v-model="myModal1" @ok="ActionUbah">
+          <b-modal title="Ubah Jadwal Pelajaran" v-model="myModal1" @ok="ActionUbah">
             <div class="form-group">
               <label>Nama Buku</label>
               <input class="form-control" v-model="namabuku" type="text">
