@@ -40,6 +40,7 @@ import esppmonitoring from '@/views/pages/esppmonitoring'
 import accpembayaran from '@/views/pages/accpembayaran'
 import historytransaksi from '@/views/pages/espphistorymonitoring'
 import rangukmannilai from '@/views/pages/rangkumannilai'
+import databuku from '@/views/pages/databuku'
 import rekapabsen from '@/views/pages/rekapabsen'
 Vue.use(Router)
 
@@ -81,6 +82,11 @@ export default new Router({
               path: 'datasiswa',
               name: 'Data Siswa',
               component: datasiswa
+            },
+            {
+              path: 'databuku',
+              name: 'Data Buku',
+              component: databuku
             },
             {
               path: 'datakelas',
