@@ -42,6 +42,7 @@ import historytransaksi from '@/views/pages/espphistorymonitoring'
 import rangukmannilai from '@/views/pages/rangkumannilai'
 import databuku from '@/views/pages/databuku'
 import rekapabsen from '@/views/pages/rekapabsen'
+import jadwalpelajaran from '@/views/pages/jadwalpelajaran'
 Vue.use(Router)
 
 export default new Router({
@@ -82,6 +83,11 @@ export default new Router({
               path: 'datasiswa',
               name: 'Data Siswa',
               component: datasiswa
+            },
+            {
+              path: 'jadwalpelajaran',
+              name: 'Jadwal Pelajaran',
+              component: jadwalpelajaran
             },
             {
               path: 'databuku',
