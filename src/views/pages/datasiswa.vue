@@ -134,7 +134,6 @@ export default {
       alamat: '',
       apiurl: apiendpoint.apiendpoint,
       id: ''
-
     }
   },
   mounted: function () {
@@ -167,7 +166,7 @@ export default {
       formData.append('jeniskelamin', this.jeniskelamin)
       formData.append('nomortelpon', this.nomortelpon)
       formData.append('idsekolah', 3)
-      formData.append('idkelas', 1)
+      formData.append('idkelas', this.kelas)
       await siswaService.create(formData)
       this.loadData()
     },
@@ -212,7 +211,7 @@ export default {
         formData.append('jeniskelamin', this.jeniskelamin)
         formData.append('nomortelpon', this.nomortelpon)
         formData.append('idsekolah', 3)
-        formData.append('idkelas', 1)
+        formData.append('idkelas', this.kelas)
         let id = vm.id
         await siswaService.UpdateFoto(formData, id)
         this.loadData()

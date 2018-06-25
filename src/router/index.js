@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
 // Containers
 import Full from '@/containers/Full'
@@ -42,10 +42,9 @@ import historytransaksi from '@/views/pages/espphistorymonitoring'
 import rangukmannilai from '@/views/pages/rangkumannilai'
 import databuku from '@/views/pages/databuku'
 import rekapabsen from '@/views/pages/rekapabsen'
-import jadwalpelajaran from '@/views/pages/jadwalpelajaran'
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   mode: 'hash', // Demo is living in GitHub.io, so required!
   linkActiveClass: 'open active',
   scrollBehavior: () => ({ y: 0 }),
@@ -59,17 +58,20 @@ export default new Router({
         {
           path: 'dashboard',
           name: 'Dashboard',
-          component: Dashboard
+          component: Dashboard,
+          meta: { requiresAuth: true }
         },
         {
           path: 'rangkumannilai',
           name: 'Rangkuman Nilai',
-          component: rangukmannilai
+          component: rangukmannilai,
+          meta: { requiresAuth: true }
         },
         {
           path: 'rekapabsen',
           name: 'Rekap Absen',
-          component: rekapabsen
+          component: rekapabsen,
+          meta: { requiresAuth: true }
         },
         {
           path: 'masterdata',
@@ -82,32 +84,32 @@ export default new Router({
             {
               path: 'datasiswa',
               name: 'Data Siswa',
-              component: datasiswa
-            },
-            {
-              path: 'jadwalpelajaran',
-              name: 'Jadwal Pelajaran',
-              component: jadwalpelajaran
+              component: datasiswa,
+              meta: { requiresAuth: true }
             },
             {
               path: 'databuku',
               name: 'Data Buku',
-              component: databuku
+              component: databuku,
+              meta: { requiresAuth: true }
             },
             {
               path: 'datakelas',
               name: 'Data Kelas',
-              component: datakelas
+              component: datakelas,
+              meta: { requiresAuth: true }
             },
             {
               path: 'dataguru',
               name: 'Data Guru',
-              component: dataguru
+              component: dataguru,
+              meta: { requiresAuth: true }
             },
             {
               path: 'datausers',
               name: 'Data User',
-              component: datauser
+              component: datauser,
+              meta: { requiresAuth: true }
             }
           ]
         },
@@ -122,12 +124,14 @@ export default new Router({
             {
               path: 'approvalsiswa',
               name: 'Approval Siswa',
-              component: approvalsiswa
+              component: approvalsiswa,
+              meta: { requiresAuth: true }
             },
             {
               path: 'approvalguru',
               name: 'Approval Guru',
-              component: approvalguru
+              component: approvalguru,
+              meta: { requiresAuth: true }
             }
           ]
         },
@@ -142,17 +146,20 @@ export default new Router({
             {
               path: 'monitoring',
               name: 'Monitoring SPP',
-              component: esppmonitoring
+              component: esppmonitoring,
+              meta: { requiresAuth: true }
             },
             {
               path: 'accpembayaran',
               name: 'Approval Pembayaran',
-              component: accpembayaran
+              component: accpembayaran,
+              meta: { requiresAuth: true }
             },
             {
               path: 'historytransaksi',
               name: 'History Transaksi',
-              component: historytransaksi
+              component: historytransaksi,
+              meta: { requiresAuth: true }
             }
           ]
         },
@@ -167,12 +174,14 @@ export default new Router({
             {
               path: 'tugas',
               name: 'Tugas Siswa',
-              component: elearningtugas
+              component: elearningtugas,
+              meta: { requiresAuth: true }
             },
             {
               path: 'jadwalpelajaran',
               name: 'Jadwal Pelajaran',
-              component: elearningjadwal
+              component: elearningjadwal,
+              meta: { requiresAuth: true }
             }
           ]
         },
@@ -187,12 +196,14 @@ export default new Router({
             {
               path: 'standard-buttons',
               name: 'Standard Buttons',
-              component: StandardButtons
+              component: StandardButtons,
+              meta: { requiresAuth: true }
             },
             {
               path: 'button-groups',
               name: 'Button Groups',
-              component: ButtonGroups
+              component: ButtonGroups,
+              meta: { requiresAuth: true }
             },
             {
               path: 'dropdowns',

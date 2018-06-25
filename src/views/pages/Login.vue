@@ -10,15 +10,15 @@
                 <p class="text-muted">Sign In to your account</p>
                 <b-input-group class="mb-3">
                   <b-input-group-prepend><b-input-group-text><i class="icon-user"></i></b-input-group-text></b-input-group-prepend>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Email" v-model="email">
                 </b-input-group>
                 <b-input-group class="mb-4">
                   <b-input-group-prepend><b-input-group-text><i class="icon-lock"></i></b-input-group-text></b-input-group-prepend>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" class="form-control" placeholder="Password" v-model="password">
                 </b-input-group>
                 <b-row>
                   <b-col cols="6">
-                    <b-button variant="primary" class="px-4">Login</b-button>
+                    <b-button variant="primary" class="px-4" @click="login()">Login</b-button>
                   </b-col>
                   <b-col cols="6" class="text-right">
                     <b-button variant="link" class="px-0">Forgot password?</b-button>
@@ -43,7 +43,27 @@
 </template>
 
 <script>
+import router from '../../router'
+import authService from '../../services/authentication'
 export default {
-  name: 'Login'
+  name: 'Login',
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    async login () {
+      let data = {
+        'email': this.email,
+        'password': this.password,
+        'strategy': 'local'
+      }
+      const result = await authService.login(data)
+      localStorage.setItem('token', result.accessToken)
+      router.push({ name: 'dashboard' })
+    }
+  }
 }
 </script>
