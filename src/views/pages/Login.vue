@@ -62,7 +62,7 @@ export default {
       }
       const result = await authService.login(data)
       localStorage.setItem('token', result.accessToken)
-      router.push({ name: 'dashboard' })
+      router.push({ name: 'Dashboard' })
     }
   }
 }

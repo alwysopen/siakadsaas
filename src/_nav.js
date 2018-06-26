@@ -53,11 +53,6 @@ export default {
           icon: 'fa fa-circle-thin'
         },
         {
-          name: 'Jadwal Pelajaran',
-          url: '/masterdata/jadwalpelajaran',
-          icon: 'fa fa-circle-thin'
-        },
-        {
           name: 'Data Kelas',
           url: '/masterdata/datakelas',
           icon: 'fa fa-circle-thin'

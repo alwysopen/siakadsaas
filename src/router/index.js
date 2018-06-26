@@ -35,7 +35,8 @@ import datauser from '@/views/pages/datausers'
 import approvalsiswa from '@/views/pages/approvalsiswa'
 import approvalguru from '@/views/pages/approvalguru'
 import elearningtugas from '@/views/pages/elearningtugas'
-import elearningjadwal from '@/views/pages/elearningjadwal'
+import jadwalpelajaran from '@/views/pages/jadwalpelajaran'
+
 import esppmonitoring from '@/views/pages/esppmonitoring'
 import accpembayaran from '@/views/pages/accpembayaran'
 import historytransaksi from '@/views/pages/espphistorymonitoring'
@@ -180,7 +181,7 @@ export default new VueRouter({
             {
               path: 'jadwalpelajaran',
               name: 'Jadwal Pelajaran',
-              component: elearningjadwal,
+              component: jadwalpelajaran,
               meta: { requiresAuth: true }
             }
           ]
