@@ -55,6 +55,7 @@ export default new VueRouter({
       redirect: '/dashboard',
       name: 'Home',
       component: Full,
+      meta: { requiresAuth: true },
       children: [
         {
           path: 'dashboard',
