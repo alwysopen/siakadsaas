@@ -24,8 +24,9 @@
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-home"></i></b-input-group-text>
                 </b-input-group-prepend>
-                <input type="text" class="form-control" placeholder="Nama Sekolah">
-              </b-input-group>
+                    <bs-input type="text" class="form-control" placeholder="Insert a fruit" :datalist="persons">
+                    </bs-input>
+                </b-input-group>
               <b-input-group class="mb-3">
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-lock"></i></b-input-group-text>
@@ -50,7 +51,19 @@
 </template>
 
 <script>
+import AutoComplete from '../../components/autocomplete.vue'
+import BsInput from 'vue-strap/src/input'
+
 export default {
-  name: 'Register'
+  name: 'Register',
+  components: { AutoComplete, BsInput },
+  data () {
+    return {
+      persons: [
+        'kambing',
+        'unta'
+      ]
+    }
+  }
 }
 </script>
