@@ -4,9 +4,11 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import App from './App'
 import router from './router'
-
+import Autocomplete from 'v-autocomplete'
+import Axios from 'axios'
+Vue.use(Autocomplete)
 Vue.use(BootstrapVue)
-
+Vue.prototype.$http = Axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

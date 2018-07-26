@@ -20,7 +20,12 @@
                 </b-input-group-prepend>
                 <input type="text" class="form-control" placeholder="Email">
               </b-input-group>
-
+               <b-input-group class="mb-3">
+                <b-input-group-prepend>
+                  <b-input-group-text><i class="icon-home"></i></b-input-group-text>
+                </b-input-group-prepend>
+                <input type="text" class="form-control" placeholder="Nama Sekolah">
+              </b-input-group>
               <b-input-group class="mb-3">
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-lock"></i></b-input-group-text>
@@ -37,16 +42,6 @@
 
               <b-button variant="success" block>Create Account</b-button>
             </b-card-body>
-            <b-card-footer class="p-4">
-              <b-row>
-                <b-col cols="6">
-                  <b-button block class="btn btn-facebook"><span>facebook</span></b-button>
-                </b-col>
-                <b-col cols="6">
-                  <b-button block class="btn btn-twitter" type="button"><span>twitter</span></b-button>
-                </b-col>
-              </b-row>
-            </b-card-footer>
           </b-card>
         </b-col>
       </b-row>
