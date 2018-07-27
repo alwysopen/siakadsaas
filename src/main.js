@@ -6,6 +6,8 @@ import App from './App'
 import router from './router'
 import Autocomplete from 'v-autocomplete'
 import Axios from 'axios'
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 Vue.use(Autocomplete)
 Vue.use(BootstrapVue)
 Vue.prototype.$http = Axios
